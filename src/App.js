@@ -14,12 +14,14 @@ class App extends React.Component {
   }
 
   fetchAdvice = () => {
-    // const iid = Math.floor(Math.random() * 100) - 1;
+    const id = Math.floor(Math.random() * 100) - 1;
     axios
-      .get("https://api.adviceslip.com/advice")
+      .get(`https://api.adviceslip.com/advice/${id}`)
       .then((response) => {
-        // const data = JSON.parse(response.data + "}");
-        const { advice } = response.data.slip;
+        const data = JSON.parse(response.data + "}");
+
+        const { advice } = data.slip;
+        // const { advice } = response.data.slip;
         this.setState({ advice });
       })
       .catch((error) => {

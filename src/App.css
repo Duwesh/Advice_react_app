@@ -5,11 +5,15 @@ body {
   padding: 0;
   height: 100vh;
   box-sizing: border-box;
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  /* font-size: 62.5%; */
 }
 
 .app {
   height: 100%;
-  background: url("./images/nature.jpg");
+  background: url(./images/waterLakeBg.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -19,44 +23,48 @@ body {
 }
 
 .card {
-  background: whitesmoke;
+  background: var(--color-secondary);
   width: 40%;
   height: 20%;
   display: flex;
   align-items: center;
   flex-direction: column;
   border-radius: 25px;
-  padding: 2%;
-  box-shadow: 10px 10px;
+  padding: 8%;
+  box-shadow: 6px 6px;
 }
 
 .heading {
   display: flex;
   align-items: center;
-  height: 582px;
+  height: 580px;
+  /* font-size: 1.2rem; */
+  /* margin-bottom: 2%; */
+  font-family: "Open Sans", sans-serif;
 }
 
 .button {
-  position: relative;
-  outline: none;
-  text-decoration: none;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  height: 200px;
-  width: 210px;
-  opacity: 1;
-  background-color: #ffffff;
+  background: var(--color-accent);
+  border-radius: 50px;
   border: 1px solid rgba(22, 76, 167, 0.6);
+  cursor: pointer;
+  display: flex;
+  height: 4.5rem;
+  justify-content: center;
+  opacity: 1;
+  outline: none;
+  padding: 2%;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 10rem;
 }
 
 .button span {
-  color: #164ca7;
+  color: whitesmoke;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.7px;
 }
 
